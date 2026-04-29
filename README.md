@@ -1,6 +1,12 @@
 # thollander/actions-comment-pull-request
 
-Hardened GitHub Action by [Chainguard](https://www.chainguard.dev).
+Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/thollander/actions-comment-pull-request](https://github.com/thollander/actions-comment-pull-request).
+
+## Versions
+
+| Version | Tag | Upstream commit |
+|---------|-----|-----------------|
+| v3.0.1 | [`v3.0.1`](https://github.com/chainguard-actions/actions-comment-pull-request/tree/v3.0.1) | — |
 
 ## Privacy
 
