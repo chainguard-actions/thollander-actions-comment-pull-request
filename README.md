@@ -1,5 +1,7 @@
 # thollander/actions-comment-pull-request
 
+GitHub action to comment pull request
+
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/thollander/actions-comment-pull-request](https://github.com/thollander/actions-comment-pull-request).
 
 ## Versions
