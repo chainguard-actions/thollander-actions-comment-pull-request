@@ -1,4 +1,6 @@
 {
-  "upstream": "thollander/actions-comment-pull-request",
-  "version": "v3.0.1"
+  "owner": "thollander",
+  "repo": "actions-comment-pull-request",
+  "version": "",
+  "url": "https://github.com/thollander/actions-comment-pull-request"
 }
