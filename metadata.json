@@ -1,7 +1,7 @@
 {
   "owner": "thollander",
   "name": "actions-comment-pull-request",
-  "visibility": "internal",
+  "visibility": "public",
   "description": "GitHub action to comment pull request",
   "block_publish": false
 }
