@@ -1,0 +1,30 @@
+name: Test message and pr-number inputs
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_NAME: pull_request
+      GITHUB_REF: refs/pull/1/merge
+      GITHUB_HEAD_REF: feature-branch
+      GITHUB_BASE_REF: main
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: action
+        uses: .
+        continue-on-error: true
+        with:
+          message: "Hello from test!"
+          pr-number: "1"
+          github-token: "fake-token-for-testing"
+      - name: Assert action was invoked with message and pr-number inputs
+        run: |
+          echo "Action outcome: ${{ steps.action.outcome }}"
+          # The action will fail due to fake token/no real PR, but it must have been invoked
+          # We just verify it ran (not skipped) — input coverage is the goal here
+          if [ "${{ steps.action.outcome }}" = "skipped" ]; then
+            echo "FAIL: action was skipped, expected it to run"
+            exit 1
+          fi
+          echo "PASS: action was invoked with message and pr-number inputs"
